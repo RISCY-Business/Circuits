@@ -1102,9 +1102,19 @@
       <a name="fanout" val="32"/>
       <a name="incoming" val="32"/>
     </comp>
+    <comp lib="0" loc="(410,680)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="south"/>
+      <a name="fanout" val="32"/>
+      <a name="incoming" val="32"/>
+    </comp>
     <comp lib="0" loc="(450,270)" name="Pin">
       <a name="appearance" val="classic"/>
     </comp>
+    <comp lib="0" loc="(470,660)" name="Pin">
+      <a name="appearance" val="classic"/>
+    </comp>
+    <comp lib="0" loc="(470,700)" name="Clock"/>
     <comp lib="0" loc="(700,280)" name="Splitter">
       <a name="appear" val="right"/>
       <a name="facing" val="north"/>
@@ -1120,11 +1130,16 @@
     <comp lib="5" loc="(710,260)" name="LedBar">
       <a name="matrixcols" val="32"/>
     </comp>
+    <comp lib="5" loc="(80,700)" name="DipSwitch">
+      <a name="number" val="32"/>
+    </comp>
     <comp loc="(670,270)" name="Ram128KB"/>
+    <comp loc="(690,660)" name="Ram32x8"/>
     <wire from="(240,290)" to="(450,290)"/>
     <wire from="(400,310)" to="(400,410)"/>
     <wire from="(400,310)" to="(450,310)"/>
     <wire from="(400,500)" to="(430,500)"/>
+    <wire from="(410,680)" to="(470,680)"/>
     <wire from="(430,330)" to="(430,500)"/>
     <wire from="(430,330)" to="(450,330)"/>
     <wire from="(450,290)" to="(460,290)"/>
@@ -1137,21 +1152,6 @@
     <a name="circuit" val="Ram128KB"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(150,690)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="address"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(180,690)" name="Splitter">
-      <a name="fanout" val="32"/>
-      <a name="incoming" val="32"/>
-    </comp>
-    <comp lib="0" loc="(220,690)" name="Splitter">
-      <a name="appear" val="right"/>
-      <a name="facing" val="west"/>
-      <a name="fanout" val="15"/>
-      <a name="incoming" val="15"/>
-    </comp>
     <comp lib="0" loc="(320,310)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="load"/>
@@ -1159,6 +1159,11 @@
     <comp lib="0" loc="(320,340)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="clock"/>
+    </comp>
+    <comp lib="0" loc="(320,390)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="address"/>
+      <a name="width" val="15"/>
     </comp>
     <comp lib="0" loc="(510,320)" name="Constant"/>
     <comp lib="0" loc="(510,370)" name="Pin">
@@ -1178,13 +1183,11 @@
       <a name="addrWidth" val="15"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="dataWidth" val="32"/>
-      <a name="type" val="nonvolatile"/>
     </comp>
-    <wire from="(150,690)" to="(180,690)"/>
-    <wire from="(220,690)" to="(440,690)"/>
     <wire from="(320,310)" to="(560,310)"/>
     <wire from="(320,340)" to="(560,340)"/>
-    <wire from="(440,270)" to="(440,690)"/>
+    <wire from="(320,390)" to="(440,390)"/>
+    <wire from="(440,270)" to="(440,390)"/>
     <wire from="(440,270)" to="(560,270)"/>
     <wire from="(510,320)" to="(560,320)"/>
     <wire from="(510,350)" to="(510,370)"/>
