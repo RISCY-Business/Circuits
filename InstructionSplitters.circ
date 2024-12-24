@@ -25,7 +25,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="main"/>
+  <main name="R_Splitter"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -58,12 +58,6 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="main">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-  </circuit>
   <circuit name="R_Splitter">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="R_Splitter"/>
@@ -639,7 +633,7 @@
     <comp lib="0" loc="(330,770)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
-      <a name="label" val="immediate_12"/>
+      <a name="label" val="immediate_20"/>
       <a name="output" val="true"/>
     </comp>
     <wire from="(200,740)" to="(210,740)"/>
