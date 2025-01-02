@@ -25,12 +25,12 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#RegisterFileModule.circ" name="12"/>
-  <lib desc="file#ImmediateGenerator.circ" name="13"/>
-  <lib desc="file#InstructionFetchModule.circ" name="14"/>
-  <lib desc="file#MemoryModule.circ" name="15"/>
-  <lib desc="file#DecodeModule.circ" name="16"/>
-  <lib desc="file#ALU.circ" name="17"/>
+  <lib desc="file#ALU.circ" name="12"/>
+  <lib desc="file#MemoryModule.circ" name="13"/>
+  <lib desc="file#RegisterFileModule.circ" name="14"/>
+  <lib desc="file#DecodeModule.circ" name="15"/>
+  <lib desc="file#InstructionFetchModule.circ" name="16"/>
+  <lib desc="file#ImmediateGenerator.circ" name="17"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -83,10 +83,10 @@
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(240,260)" name="Clock"/>
-    <comp lib="12" loc="(780,170)" name="RegisterFile32"/>
-    <comp lib="15" loc="(780,480)" name="memoryModule"/>
-    <comp lib="16" loc="(490,180)" name="DecodeModule"/>
-    <comp lib="17" loc="(780,360)" name="ALU"/>
+    <comp lib="12" loc="(780,360)" name="ALU"/>
+    <comp lib="13" loc="(780,480)" name="memoryModule"/>
+    <comp lib="14" loc="(780,170)" name="RegisterFile32"/>
+    <comp lib="15" loc="(490,180)" name="DecodeModule"/>
     <wire from="(240,200)" to="(270,200)"/>
     <wire from="(240,230)" to="(260,230)"/>
     <wire from="(240,260)" to="(270,260)"/>
@@ -170,12 +170,12 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="12" loc="(1010,120)" name="RegisterFile32"/>
-    <comp lib="13" loc="(1030,420)" name="ImmediateGenerator"/>
-    <comp lib="15" loc="(1010,530)" name="memoryModule"/>
-    <comp lib="16" loc="(1110,320)" name="ImmediateSelector"/>
-    <comp lib="16" loc="(520,120)" name="DecodeModule"/>
-    <comp lib="17" loc="(600,410)" name="ALU"/>
+    <comp lib="12" loc="(600,410)" name="ALU"/>
+    <comp lib="13" loc="(990,530)" name="memoryModule"/>
+    <comp lib="14" loc="(1010,120)" name="RegisterFile32"/>
+    <comp lib="15" loc="(1110,320)" name="ImmediateSelector"/>
+    <comp lib="15" loc="(520,120)" name="DecodeModule"/>
+    <comp lib="17" loc="(1030,420)" name="ImmediateGenerator"/>
     <comp lib="2" loc="(670,420)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
@@ -191,7 +191,7 @@
     <wire from="(220,120)" to="(280,120)"/>
     <wire from="(240,300)" to="(240,530)"/>
     <wire from="(240,300)" to="(790,300)"/>
-    <wire from="(240,530)" to="(790,530)"/>
+    <wire from="(240,530)" to="(770,530)"/>
     <wire from="(280,120)" to="(280,390)"/>
     <wire from="(280,120)" to="(300,120)"/>
     <wire from="(280,390)" to="(810,390)"/>
@@ -214,10 +214,10 @@
     <wire from="(520,260)" to="(770,260)"/>
     <wire from="(600,410)" to="(620,410)"/>
     <wire from="(610,200)" to="(610,590)"/>
-    <wire from="(610,590)" to="(790,590)"/>
+    <wire from="(610,590)" to="(770,590)"/>
     <wire from="(620,410)" to="(620,570)"/>
     <wire from="(620,410)" to="(640,410)"/>
-    <wire from="(620,570)" to="(790,570)"/>
+    <wire from="(620,570)" to="(770,570)"/>
     <wire from="(630,430)" to="(630,490)"/>
     <wire from="(630,430)" to="(640,430)"/>
     <wire from="(630,490)" to="(1010,490)"/>
@@ -225,7 +225,7 @@
     <wire from="(670,420)" to="(700,420)"/>
     <wire from="(680,320)" to="(680,550)"/>
     <wire from="(680,320)" to="(800,320)"/>
-    <wire from="(680,550)" to="(790,550)"/>
+    <wire from="(680,550)" to="(770,550)"/>
     <wire from="(700,140)" to="(700,360)"/>
     <wire from="(700,360)" to="(890,360)"/>
     <wire from="(700,420)" to="(700,580)"/>
@@ -251,5 +251,6 @@
     <wire from="(880,300)" to="(1010,300)"/>
     <wire from="(880,300)" to="(880,340)"/>
     <wire from="(880,340)" to="(890,340)"/>
+    <wire from="(990,530)" to="(1010,530)"/>
   </circuit>
 </project>
